@@ -1,10 +1,9 @@
-/* início do css3*/
+/* início do css3 - VERSÃO CORRIGIDA */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
 }
 
 :root {
@@ -35,18 +34,31 @@
 
     /* Bordas */
     --border-radius: 8px;
-    --sombra-suave:: 0 4px 20px rgba(0, 0, 0, 0.08);
-
+    /* CORREÇÃO: Removido um ':' extra */
+    --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.08); 
 }
 
+/* CORREÇÃO: Combinamos as DUAS regras 'body' em UMA SÓ */
 body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
     color: var(--cor-texto-principal);
     line-height: 1.6;
+    
+    display:grid;
+    /* CORREÇÃO: Adicionamos 'auto' para o footer */
+    grid-template-rows: auto auto 1fr auto; 
+    grid-template-columns: 1fr;
+    /* CORREÇÃO: Ordem 'nav' e 'main' estava invertida */
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    min-height: 100vh;
 }
 
-h1, h2, h3   {
+h1, h2, h3 {
     font-size: var(--fs-h1);
     margin-bottom: var(--esp-2);
     color: var(--cor-secundaria)
@@ -79,17 +91,6 @@ a:hover {
     text-decoration: underline;
 }
 
-body {
-    
-    display:grid;
-    grid-template-rows: auto auto 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "header"
-    "main"
-    "nav";
-}
-
 header {
     grid-area: header;
     background-color: var(--cor-branca);
@@ -112,7 +113,8 @@ nav {
 }
 
 nav h2 {
-    positiyon: absolute;
+    /* CORREÇÃO: 'positiyon' -> 'position' */
+    position: absolute;
     left: -9999px;
     width: 1px;
     height: 1px;
@@ -126,16 +128,20 @@ nav ul {
     list-style: none;
 }
 
-nav ul li {
+/* CORREÇÃO: Os estilos devem ser no <a>, não no <li> */
+nav ul li a {
     display: block;
     padding: var(--esp-2);
     color: var(--cor-branca);
     text-decoration: none;
-    front-weight: none;
+    /* CORREÇÃO: 'front-weight' -> 'font-weight' */
+    font-weight: 600; 
+    font-size: 1.1rem;
     transition: all 0.3s ease;
 }
 
-nav ul li:hover {
+/* CORREÇÃO: O :hover também deve ser no <a> */
+nav ul li a:hover {
     background-color: var(--cor-primaria);
     transform: translateY(-2px);
     text-decoration: none;
@@ -144,7 +150,7 @@ nav ul li:hover {
 main {
     grid-area: main;
     padding: var(--esp-4) var(--esp-2);
-    background-color: var(--cor-fundo);
+    /* background-color foi movido para 'body' */
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
@@ -155,8 +161,10 @@ article {
     padding: var(--esp-3);
     margin-bottom: var(--esp-4);
     border-radius: var(--border-radius);
-    box-shadow: var(--sombra-suave);
+    /* Agora a sombra vai funcionar */
+    box-shadow: var(--sombra-suave); 
 }
+
 article header {
     display: block;
     margin-bottom: var(--esp-2);
@@ -221,8 +229,7 @@ fieldset {
     border-radius: var(--border-radius);
     padding: var(--esp-3);
     margin-bottom: var(--esp-3);
-    box-shadow: var(--sombra-suave);  
-    
+    box-shadow: var(--sombra-suave);    
 }
 
 legend {
@@ -236,14 +243,13 @@ label {
     display: block;
     margin-bottom: var(--esp-1);
     font-weight: 500;
-  }
+}
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="date"],
 input[type="file"],
-
 select,
 textarea {
     width: 100%;
@@ -257,7 +263,7 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
-input[type="date"]:focus,
+input[type-> "date"]:focus,
 input[type="file"]:focus,
 select:focus,
 textarea:focus {
@@ -272,14 +278,14 @@ textarea:valid {
     border-color: var(--cor-sucesso);
 }
 
+/* CORREÇÃO: Bloco de sintaxe corrigido */
 input:invalid:not(:placeholder-shown),
-select:invalid:not(:placeholder-shown)
+select:invalid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown) {
     border-color: var(--cor-erro);
 }
 
 /* Fazendo os cards*/
-
 .card {
     background-color: var(--cor-branca);
     border-radius: var(--border-radius);
@@ -296,15 +302,56 @@ textarea:invalid:not(:placeholder-shown) {
 }
 
 .card h3 {
-    color: var(--cor-primaria)
+    color: var(--cor-primaria);
     margin-bottom: var(--esp-2);
 }
 
-.card.ul {
+/* CORREÇÃO: Seletor '.card.ul' -> '.card ul' */
+.card ul {
     list-style-position: inside;
     padding-left: var(--esp-1);
 }
 
-.card.ul li {
+/* CORREÇÃO: Seletor '.card.ul li' -> '.card ul li' */
+.card ul li {
     margin-bottom: var(--esp-1);
 }   
+
+footer {
+    grid-area: footer;
+    background-color:  #333;
+    color: var(--cor-branca);
+    text-align: center;
+    padding: var(--esp-3);
+    font-size: var(--fs-small);
+}
+
+/* CORREÇÃO: Seletor '.nav.footer' -> '.nav-footer' (classe) */
+.nav-footer {
+    margin-bottom: var(--esp-2);
+}
+
+/* CORREÇÃO: Seletor '.nav.footer a' -> '.nav-footer a' */
+.nav-footer a {
+    color: var(--cor-branca);
+    font-weight: 500;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-left: var(--esp-1);
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+}
+
+form br {
+   display: block;
+   content: "";
+   margin-top: var(--esp-1);
+}
