@@ -277,3 +277,34 @@ select:invalid:not(:placeholder-shown)
 textarea:invalid:not(:placeholder-shown) {
     border-color: var(--cor-erro);
 }
+
+/* Fazendo os cards*/
+
+.card {
+    background-color: var(--cor-branca);
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra-suave);
+    padding: var(--esp-3);
+    margin-bottom: var(--esp-3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--cor-primaria)
+    margin-bottom: var(--esp-2);
+}
+
+.card.ul {
+    list-style-position: inside;
+    padding-left: var(--esp-1);
+}
+
+.card.ul li {
+    margin-bottom: var(--esp-1);
+}   
