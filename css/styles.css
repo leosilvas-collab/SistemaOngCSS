@@ -149,3 +149,36 @@ main {
     max-width: 1000px;
     margin: 0 auto;
 }
+
+article {
+    background-color: var(--cor-branca);
+    padding: var(--esp-3);
+    margin-bottom: var(--esp-4);
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra-suave);
+}
+article header {
+    display: block;
+    margin-bottom: var(--esp-2);
+}
+
+article header h2 {
+    font-size: var(--fs-h2);
+    color: var(--cor-secundaria);
+    margin-bottom: 0;
+}
+
+article header time {
+    display:block;
+    font-size: var(--fs-small);
+    color: var(--cor-texto-secundario);
+    margin-top: var(--esp-1);
+    font-style: italic;
+}
+
+hr {
+    border: 0;
+    height: 1px ;
+    border-top: 1px solid #eee;
+    margin: var(--esp-4) 0;
+}
