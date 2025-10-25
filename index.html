@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <!-- se trata da index.html -->
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Proteção dos Gatos Siameses sem Rabinho</title>
     <link rel="icon" href="img/logomini.png" type="image/png">
-
+    
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
 
     <nav>
-        <a href="index.html">
-            <img src="img/logolazy.png" alt="Logo da ONG Proteção dos Gatos Siameses sem Rabinho">
+        <a href="index.html" class="logo-nav">
+            <img src="img/logomini.png" alt="Logo Mini da ONG">
         </a>
-           <h2>Menu Principal</h2>
+        
+        <h2>Menu Principal</h2>
+        
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="sobre.html">Sobre a organização</a></li>
@@ -27,96 +27,108 @@
             <li><a href="blog.html">Blog/Notícias</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
+
+        <button class="menu-hamburguer" onclick="toggleMenu()">&#9776;</button>
+
     </nav>
 
+    <ul class="nav-links-mobile" id="nav-links-mobile">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre a organização</a></li>
+        <li><a href="projetos.html">Projetos sociais</a></li>
+        <li><a href="voluntariado.html">Voluntariado</a></li>
+        <li><a href="doacoes.html">Como doar</a></li>
+        <li><a href="transparencia.html">Transparência</a></li>
+        <li><a href="blog.html">Blog/Notícias</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+
     <main>
-        <h1>Amor que não se mede pelo tamanho da cauda.</h1>
+        
+        <div class="row">
 
-        <section>
-            <h2>Nossa Missão</h2>
-            <p>Acreditamos que <strong>toda vida felina é preciosa</strong>. Nossa ONG nasceu para dar voz e visibilidade a esses felinos únicos, garantindo que suas características especiais sejam vistas como <em>um charme, e não um defeito</em>.</p>
-        </section>
+            <div class="col-lg-8">
+                <h1>Amor que não se mede pelo tamanho da cauda.</h1>
+                <p>Nossa missão é resgatar, cuidar e encontrar lares amorosos para gatos siameses (e seus amigos) que, por uma característica genética, nasceram sem parte da cauda. Conheça nosso trabalho e veja como você pode ajudar a mudar uma vida.</p>
 
-        <section>
-            <h2>Conheça nosso trabalho - vídeo obtido do youtube</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/i2qIYQ64r_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <h3>Depoimentos que aquecem o coração</h3>
-            <audio controls preload="metadata">
-                <source src="audio/depoimento1.mp3" type="audio/mpeg">
-                <source src="audio/depoimento1.ogg" type="audio/ogg">
-                <p>Seu navegador não suporta o elemento audio.</p>
-            </audio>
-        </section>
+                <hr>
 
-        <section>
-            <h2>Últimas do Blog</h2>
-            <article>
-                <header>
-                    <h2>A história de Miau: superação e um novo lar</h2>
-                    <time datetime="2025-10-25">25 de Outubro de 2025</time>
-                </header>
+                <article class="card"> 
+                    <header>
+                        <h2>Destaque do Mês: Adoção do Miau</h2>
+                        <time datetime="2025-10-01">01 de Outubro de 2025</time>
+                    </header>
+                    <section>
+                        <p>Este mês, celebramos a adoção do Miau! Encontrado em condições difíceis, ele é a prova de que um pouco de carinho pode transformar tudo. Veja a foto dele com sua nova família!</p>
+                        
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="img/gato-01.jpg">
+                            <img src="img/logo.png" alt="Foto do gato Miau feliz em seu novo lar">
+                        </picture>
+                        
+                        <p>Agradecemos à família Souto por abrir seu coração. Você também pode fazer a diferença!</p>
+                    </section>
+                </article>
+            </div> 
+            <div class="col-lg-4">
+
                 <section>
-                    <h2>Introdução</h2>
-                    <p>Conheça a jornada emocionante de um de nossos resgatados mais recentes, que encontrou uma família amorosa e superou todos os desafios.</p>
-                    <img src="img/logo.png" alt="Gato siamês resgatado pela ONG" loading="lazy">
+                    <form action="#" method="post">
+                        <fieldset>
+                            <legend>Nossa Newsletter</legend>
+                            <p>Inscreva-se para receber nossas histórias direto no seu e-mail!</p>
+                            
+                            <label for="nome_news">Seu Nome:</label>
+                            <input type="text" id="nome_news" name="nome_news" placeholder="Digite seu nome" required>
+                            
+                            <br><br>
+
+                            <label for="email_news">Seu E-mail:</label>
+                            <input type="email" id="email_news" name="email_news" placeholder="seuemail@dominio.com" required>
+                            
+                            <br><br>
+                            
+                            <p>Quais conteúdos você quer receber?</p>
+                            <input type="checkbox" id="pref_historias" name="preferencias" value="historias">
+                            <label for="pref_historias">Histórias de Adoção</label><br>
+                            <input type="checkbox" id="pref_dicas" name="preferencias" value="dicas">
+                            <label for="pref_dicas">Dicas de Cuidados Felinos</label><br>
+                            <input type="checkbox" id="pref_eventos" name="preferencias" value="eventos">
+                            <label for="pref_eventos">Notícias sobre Nossos Eventos</label><br>
+                            <br>
+                            
+                            <button type="submit" class="botao">Inscrever</button>
+                        </fieldset>
+                    </form>
                 </section>
-                <footer>
-                    <p>Autor: Equipe da ONG</p>
-                </footer>
-            </article>
-        </section>
 
-        <section>
-            <h2>Mitos e Verdades</h2>
-            <h3>Gatos com cauda curta têm problemas de equilíbrio?</h3>
-            <p>Isso é um mito! A grande maioria se adapta perfeitamente e leva uma vida normal e cheia de travuras. A ausência da cauda longa não afeta seu incrível equilíbrio felino.</p>
-        </section>
+                <section class="card">
+                    <h2>Informações de Contato</h2>
+                    <p>Entre em contato conosco através dos seguintes canais:</p>
+                    <address>
+                        <p><strong>E-mail:</strong> contato@ongsiameses.com.br</p>
+                        <p><strong>Telefone:</strong> (11) 99999-8888</p>
+                        <p><strong>Endereço:</strong> Rua dos Felinos, 123 - Vila Siamesa - São Paulo/SP</p>
+                    </address>
+                </section>
 
-        <aside>
-            <h2>Recursos Adicionais</h2>
-            <p>Acompanhe nossas estatísticas e veja como sua ajuda faz a diferença na página de Transparência.</p>
-            <ul>
-                <li><a href="transparencia.html">Página de Transparência</a></li>
-                <li><a href="doacoes.html">Como Doar</a></li>
-            </ul>
-        </aside>
+            </div>
+            </div>
+        </main>
 
-        <section>
-            <h2>Receba Nossas Novidades</h2>
-            <form>
-                <fieldset>
-                    <legend>Inscreva-se na nossa Newsletter</legend>
-                    <p>Fique por dentro das nossas histórias de adoção, dicas e eventos!</p>
-                    <label for="newsletter_email">Seu e-mail:</label>
-                    <input type="email" id="newsletter_email" name="newsletter_email" placeholder="Digite seu email" required>
-                    <br><br>
-                    <p>Quais conteúdos você quer receber?</p>
-                    <input type="checkbox" id="pref_historias" name="preferencias" value="historias">
-                    <label for="pref_historias">Histórias de Adoção</label><br>
-                    <input type="checkbox" id="pref_dicas" name="preferencias" value="dicas">
-                    <label for="pref_dicas">Dicas de Cuidados Felinos</label><br>
-                    <input type="checkbox" id="pref_eventos" name="preferencias" value="eventos">
-                    <label for="pref_eventos">Notícias sobre Nossos Eventos</label><br>
-                    <br>
-                    <button type="submit" class="botao">Inscrever</button>
-                </fieldset>
-            </form>
-        </section>
+    <footer>
+        <nav class="nav-footer">
+            <a href="index.html">Página Principal</a>
+        </nav>
+        <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
+    </footer>
 
-                <section>
-            <h2>Informações de Contato</h2>
-            <p>Entre em contato conosco através dos seguintes canais:</p>
-            <address>
-                <p>E-mail: contato@ongsiameses.com.br</p>
-                <p>Telefone: (11) 99999-8888</p>
-                <p>Endereço: Rua dos Felinos, 123 - Vila Siamesa - São Paulo/SP</p>
-            </address>
-            <p>Estamos aqui para ajudar!</p>
-        </section>
-
-    </main>
-<footer>
-    <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
-</footer>
+    <script>
+        function toggleMenu() {
+            var links = document.getElementById("nav-links-mobile");
+            links.classList.toggle("ativo");
+        }
+    </script>
+    
 </body>
 </html>

@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - ONG Gatos Siameses sem Rabinho</title>
     <link rel="icon" href="img/logomini.png" type="image/png">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <nav>
-        <a href="index.html">
-            <img src="img/logolazy.png" alt="Logo da ONG Proteção dos Gatos Siameses sem Rabinho">
+        <a href="index.html" class="logo-nav">
+            <img src="img/logomini.png" alt="Logo Mini da ONG">
         </a>
+        
         <h2>Menu Principal</h2>
+        
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="sobre.html">Sobre a organização</a></li>
@@ -24,74 +27,81 @@
             <li><a href="blog.html">Blog/Notícias</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
+
+        <button class="menu-hamburguer" onclick="toggleMenu()">&#9776;</button>
+
     </nav>
+
+    <ul class="nav-links-mobile" id="nav-links-mobile">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre a organização</a></li>
+        <li><a href="projetos.html">Projetos sociais</a></li>
+        <li><a href="voluntariado.html">Voluntariado</a></li>
+        <li><a href="doacoes.html">Como doar</a></li>
+        <li><a href="transparencia.html">Transparência</a></li>
+        <li><a href="blog.html">Blog/Notícias</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
 
     <main>
         <h1>Nossa História</h1>
 
         <section>
             <h2>Uma Causa Rara e Especial</h2>
-            <p>A característica da "cauda curta" em gatos siameses é resultado de uma mutação genética rara. Infelizmente, por serem "diferentes", esses animais têm uma taxa de abandono 40% maior. Nossa ONG nasceu para mudar essa realidade, mostrando que o amor não se mede pelo tamanho da cauda.</p>
-            <p>Nossa missão é resgatar, cuidar e encontrar lares responsáveis para esses felinos únicos, garantindo que sejam vistos como o charme especial que são.</p>
+            <p>A ONG "Proteção dos Gatos Siameses sem Rabinho" nasceu da paixão e da inquietação de um grupo de amigos que notou um número crescente de gatos siameses, ou com traços da raça, nascendo com uma característica genética peculiar: uma cauda mais curta ou, em alguns casos, a ausência dela. Embora essa característica não afete a saúde da maioria dos animais, ela muitas vezes gera preconceito, dificultando a adoção.</p>
+            <p>Fundada em 2020, nossa missão é dupla: resgatar e reabilitar esses gatos especiais, oferecendo-lhes cuidados veterinários, socialização e um lar temporário seguro; e educar o público, desmistificando a condição e mostrando que o amor e o companheirismo de um felino não dependem do comprimento de sua cauda.</p>
         </section>
 
-        <section>
-            <h2>Galeria de Nossos Resgatados</h2>
-            <p>Veja alguns dos anjinhos que já passaram por nossos cuidados e hoje têm um lar feliz!</p>
+        <hr>
 
-            <figure>
-                <picture>
-                    <source media="(max-width: 600px)" srcset="img/gato-01.jpg">
-                    <img src="img/gato-01.jpg" alt="Foto de um gato siamês resgatado pela ONG">
-                </picture>
-                <figcaption>Olhares que pedem um lar.</figcaption>
-            </figure>
-            <figure>
-                <picture>
-                    <source media="(max-width: 600px)" srcset="img/gato-02.jpg">
-                    <img src="img/gato-02.jpg" alt="Foto de um gato siamês resgatado pela ONG">
-                </picture>
-                <figcaption>Carinho em forma de felino.</figcaption>
-            </figure>
+        <section id="galeria-fotos" class="row">
             
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-03.jpg"><img src="img/gato-03.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Pronto para uma nova família.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-04.jpg"><img src="img/gato-04.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Uma segunda chance para amar.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-05.jpg"><img src="img/gato-05.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Beleza rara e especial.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-06.jpg"><img src="img/gato-06.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Esperando por um carinho.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-07.jpg"><img src="img/gato-07.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Amor incondicional.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-08.jpg"><img src="img/gato-08.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Companheiro para toda a vida.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-09.jpg"><img src="img/gato-09.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Salvo pelo seu apoio.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-10.jpg"><img src="img/gato-10.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Gatinho cheio de esperança.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-11.jpg"><img src="img/gato-11.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Uma história de superação.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-12.jpg"><img src="img/gato-12.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Adote, não compre.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-13.jpg"><img src="img/gato-13.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Cuidado e muito amor.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-14.jpg"><img src="img/gato-14.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Felino especial aguarda um lar.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-15.jpg"><img src="img/gato-15.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Doçura em forma de gatinho.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-16.jpg"><img src="img/gato-16.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Um amigo para a vida toda.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-17.jpg"><img src="img/gato-17.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Resgatado e pronto para amar.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-18.jpg"><img src="img/gato-18.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Charme que não se mede.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-19.jpg"><img src="img/gato-19.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Nossos protegidos.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-20.jpg"><img src="img/gato-20.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Cada vida importa.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-21.jpg"><img src="img/gato-21.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Um final feliz à espera.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-22.jpg"><img src="img/gato-22.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Resultado do seu apoio.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-23.jpg"><img src="img/gato-23.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Puro amor e gratidão.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-24.jpg"><img src="img/gato-24.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Fazendo a diferença, um a um.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-25.jpg"><img src="img/gato-25.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Gatinho cheio de personalidade.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-26.jpg"><img src="img/gato-26.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Pronto para o sofá e o carinho.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-27.jpg"><img src="img/gato-27.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Alegria que contagia.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-28.jpg"><img src="img/gato-28.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Um novo começo.</figcaption></figure>
-            <figure><picture><source media="(max-width: 600px)" srcset="img/gato-29.jpg"><img src="img/gato-29.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Transformando vidas.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-01.jpg"><img src="img/gato-01.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Miau, nosso astro do mês.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-02.jpg"><img src="img/gato-02.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Olhar atento do Frajola.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-03.jpg"><img src="img/gato-03.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Lua e Sol, irmãos inseparáveis.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-04.jpg"><img src="img/gato-04.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Pronto para adoção!</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-05.jpg"><img src="img/gato-05.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Hora da soneca.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-06.jpg"><img src="img/gato-06.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Siamês com olhos azuis.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-07.jpg"><img src="img/gato-07.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Curiosidade felina.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-08.jpg"><img src="img/gato-08.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Brincando com a caixa.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-09.jpg"><img src="img/gato-09.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Recém-chegado, se adaptando.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-10.jpg"><img src="img/gato-10.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Charme e elegância.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-11.jpg"><img src="img/gato-11.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Um dos nossos "sem rabinho".</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-12.jpg"><img src="img/gato-12.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Saudável e pronto para amar.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-13.jpg"><img src="img/gato-13.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Amor em forma de gato.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-14.jpg"><img src="img/gato-14.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Fofura em dose dupla.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-15.jpg"><img src="img/gato-15.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Resgatado da rua.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-16.jpg"><img src="img/gato-16.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>O mais novo morador.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-17.jpg"><img src="img/gato-17.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Esperando um carinho.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-18.jpg"><img src="img/gato-18.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Adotado!</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-19.jpg"><img src="img/gato-19.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Filhotes resgatados.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-20.jpg"><img src="img/gato-20.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Hora do check-up.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-21.jpg"><img src="img/gato-21.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Brincando com voluntário.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-22.jpg"><img src="img/gato-22.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Gato "sem rabinho" feliz.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-23.jpg"><img src="img/gato-23.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Depois do banho.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-24.jpg"><img src="img/gato-24.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Soneca confortável.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-25.jpg"><img src="img/gato-25.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Gatinho cheio de personalidade.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-26.jpg"><img src="img/gato-26.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Pronto para o sofá e o carinho.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-27.jpg"><img src="img/gato-27.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Alegria que contagia.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-28.jpg"><img src="img/gato-28.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Um novo começo.</figcaption></figure>
+            <figure class="col-lg-3 col-md-4 col-sm-6"><picture><source media="(max-width: 600px)" srcset="img/gato-29.jpg"><img src="img/gato-29.jpg" alt="Foto de um gato siamês resgatado pela ONG"></picture><figcaption>Transformando vidas.</figcaption></figure>
 
         </section>
+        </main>
 
-    </main>
-    <p></p>
     <footer>
-    <nav class="nav-footer">
-        <a href="index.html">Página Principal</a>
-    </nav>
-    <!-- colocando um retorno para a pagina principal -->
-    <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
+        <nav class="nav-footer">
+            <a href="index.html">Página Principal</a>
+        </nav>
+        <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var links = document.getElementById("nav-links-mobile");
+            links.classList.toggle("ativo");
+        }
+    </script>
+    
 </body>
 </html>
