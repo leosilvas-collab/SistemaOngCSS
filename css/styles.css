@@ -78,3 +78,74 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+body {
+    
+    display:grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "nav";
+}
+
+header {
+    grid-area: header;
+    background-color: var(--cor-branca);
+    padding: var(--esp-2) var(--esp-4);
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    max-width: 250px;
+    height: auto;
+}
+
+nav {
+    grid-area: nav;
+    background-color: var(--cor-secundaria);
+    padding: var(--esp-2) var(--esp-4);
+}
+
+nav h2 {
+    positiyon: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    display: block;
+    padding: var(--esp-2);
+    color: var(--cor-branca);
+    text-decoration: none;
+    front-weight: none;
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+    background-color: var(--cor-primaria);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+    padding: var(--esp-4) var(--esp-2);
+    background-color: var(--cor-fundo);
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
