@@ -47,11 +47,10 @@ body {
     
     display:grid;
     /* CORREÇÃO: Adicionamos 'auto' para o footer */
-    grid-template-rows: auto auto 1fr auto; 
+    grid-template-rows: auto 1fr auto; 
     grid-template-columns: 1fr;
     /* CORREÇÃO: Ordem 'nav' e 'main' estava invertida */
     grid-template-areas:
-        "header"
         "nav"
         "main"
         "footer";
@@ -89,21 +88,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-header {
-    grid-area: header;
-    background-color: var(--cor-branca);
-    padding: var(--esp-2) var(--esp-4);
-    border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header img {
-    max-width: 250px;
-    height: auto;
 }
 
 nav {
@@ -354,4 +338,17 @@ form br {
    display: block;
    content: "";
    margin-top: var(--esp-1);
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+    margin-top: var(--esp-2);
+}
+
+footer p {
+    margin-bottom: 0;
+    color: var(--cor-branca);
 }
