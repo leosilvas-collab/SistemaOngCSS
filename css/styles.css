@@ -1,4 +1,4 @@
-/* início do css3 - VERSÃO CORRIGIDA */
+/* início do css3 - versão para entrega da atividade II */
 
 * {
     margin: 0;
@@ -34,11 +34,10 @@
 
     /* Bordas */
     --border-radius: 8px;
-    /* CORREÇÃO: Removido um ':' extra */
+
     --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.08); 
 }
 
-/* CORREÇÃO: Combinamos as DUAS regras 'body' em UMA SÓ */
 body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
@@ -46,10 +45,8 @@ body {
     line-height: 1.6;
     
     display:grid;
-    /* CORREÇÃO: Adicionamos 'auto' para o footer */
     grid-template-rows: auto 1fr auto; 
     grid-template-columns: 1fr;
-    /* CORREÇÃO: Ordem 'nav' e 'main' estava invertida */
     grid-template-areas:
         "nav"
         "main"
@@ -94,10 +91,12 @@ nav {
     grid-area: nav;
     background-color: var(--cor-secundaria);
     padding: var(--esp-2) var(--esp-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav h2 {
-    /* CORREÇÃO: 'positiyon' -> 'position' */
     position: absolute;
     left: -9999px;
     width: 1px;
@@ -112,19 +111,16 @@ nav ul {
     list-style: none;
 }
 
-/* CORREÇÃO: Os estilos devem ser no <a>, não no <li> */
 nav ul li a {
     display: block;
     padding: var(--esp-2);
     color: var(--cor-branca);
     text-decoration: none;
-    /* CORREÇÃO: 'front-weight' -> 'font-weight' */
     font-weight: 600; 
     font-size: 1.1rem;
     transition: all 0.3s ease;
 }
 
-/* CORREÇÃO: O :hover também deve ser no <a> */
 nav ul li a:hover {
     background-color: var(--cor-primaria);
     transform: translateY(-2px);
@@ -134,7 +130,6 @@ nav ul li a:hover {
 main {
     grid-area: main;
     padding: var(--esp-4) var(--esp-2);
-    /* background-color foi movido para 'body' */
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
@@ -145,7 +140,6 @@ article {
     padding: var(--esp-3);
     margin-bottom: var(--esp-4);
     border-radius: var(--border-radius);
-    /* Agora a sombra vai funcionar */
     box-shadow: var(--sombra-suave); 
 }
 
@@ -262,7 +256,6 @@ textarea:valid {
     border-color: var(--cor-sucesso);
 }
 
-/* CORREÇÃO: Bloco de sintaxe corrigido */
 input:invalid:not(:placeholder-shown),
 select:invalid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown) {
@@ -290,13 +283,11 @@ textarea:invalid:not(:placeholder-shown) {
     margin-bottom: var(--esp-2);
 }
 
-/* CORREÇÃO: Seletor '.card.ul' -> '.card ul' */
 .card ul {
     list-style-position: inside;
     padding-left: var(--esp-1);
 }
 
-/* CORREÇÃO: Seletor '.card.ul li' -> '.card ul li' */
 .card ul li {
     margin-bottom: var(--esp-1);
 }   
@@ -310,12 +301,10 @@ footer {
     font-size: var(--fs-small);
 }
 
-/* CORREÇÃO: Seletor '.nav.footer' -> '.nav-footer' (classe) */
 .nav-footer {
     margin-bottom: var(--esp-2);
 }
 
-/* CORREÇÃO: Seletor '.nav.footer a' -> '.nav-footer a' */
 .nav-footer a {
     color: var(--cor-branca);
     font-weight: 500;
