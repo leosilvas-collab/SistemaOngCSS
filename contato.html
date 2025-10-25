@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+        <!-- se trata da página contatos.html -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - ONG Gatos Siameses sem Rabinho</title>
+    <link rel="icon" href="img/logomini.png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="img/logolazy.png" alt="Logo da ONG Proteção dos Gatos Siameses sem Rabinho">
+        </a>
+    </header>
+
+    <nav>
+        <h2>Menu Principal</h2>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre a organização</a></li>
+            <li><a href="projetos.html">Projetos sociais</a></li>
+            <li><a href="voluntariado.html">Voluntariado</a></li>
+            <li><a href="doacoes.html">Como doar</a></li>
+            <li><a href="transparencia.html">Transparência</a></li>
+            <li><a href="blog.html">Blog/Notícias</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Fale Conosco</h1>
+
+        <section>
+            <h2>Informações de Contato</h2>
+            <p>Entre em contato conosco através dos seguintes canais:</p>
+            <address>
+                <p>E-mail: contato@ongsiameses.com.br</p>
+                <p>Telefone: (11) 99999-8888</p>
+                <p>Endereço: Rua dos Felinos, 123 - Vila Siamesa - São Paulo/SP</p>
+            </address>
+            <p>Estamos aqui para ajudar!</p>
+        </section>
+
+        <section>
+            <h2>Formulário de Contato</h2>
+            <form>
+                <fieldset>
+                    <legend>Envie sua Mensagem</legend>
+
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <br><br>
+
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+
+                    <hr>
+
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="doacoes">Doações</option>
+                        <option value="voluntariado">Voluntariado</option>
+                        <option value="parcerias">Parcerias</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <br><br>
+
+                    <label for="mensagem">Sua Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="8" cols="50" required></textarea>
+                    <br><br>
+
+                    <label for="anexo">Anexar Arquivo:</label>
+                    <input type="file" id="anexo" name="anexo">
+                    <br>
+                </fieldset>
+                
+                <br>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+
+    </main>
+<p></p>
+    <nav>
+        <a href="index.html">Página Principal</a>
+    </nav>
+            <!-- colocando um retorno para a pagina principal -->
+    <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
+
+</body>
+</html>

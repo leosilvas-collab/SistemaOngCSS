@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+        <!-- se trata da transparencia.html -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparência - ONG Gatos Siameses sem Rabinho</title>
+    <link rel="icon" href="img/logomini.png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="img/logolazy.png" alt="Logo da ONG Proteção dos Gatos Siameses sem Rabinho">
+        </a>
+    </header>
+
+    <nav>
+        <h2>Menu Principal</h2>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre a organização</a></li>
+            <li><a href="projetos.html">Projetos sociais</a></li>
+            <li><a href="voluntariado.html">Voluntariado</a></li>
+            <li><a href="doacoes.html">Como doar</a></li>
+            <li><a href="transparencia.html">Transparência</a></li>
+            <li><a href="blog.html">Blog/Notícias</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Nossa Transparência</h1>
+
+        <section>
+            <h2>Sobre os Dados Apresentados</h2>
+            <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
+        </section>
+
+        <section>
+            <h2>Nossos Números</h2>
+            
+            <article>
+                <h3>Distribuição de Recursos por Projeto</h3>
+                <canvas id="graficoDistribuicao" width="400" height="200">
+                    Seu navegador não suporta o elemento canvas.
+                </canvas>
+                <ul>
+                    <li><b>Círculo Azul:</b> Resgate e Cuidados (60%)</li>
+                    <li><b>Círculo Verde:</b> Campanhas de Adoção (25%)</li>
+                    <li><b>Círculo Vermelho:</b> Educação Comunitária (15%)</li>
+                </ul>
+            </article>
+            
+            <article>
+                <h3>Evolução de Voluntários ao Longo do Tempo</h3>
+                <canvas id="graficoEvolucao" width="400" height="200">
+                    Seu navegador não suporta o elemento canvas.
+                </canvas>
+                <ul>
+                    <li><b>Mês 1 - Janeiro:</b> 10 Voluntários</li>
+                    <li><b>Mês 2 - Fevereiro:</b> 12 Voluntários</li>
+                    <li><b>Mês 3 - Março:</b> 18 Voluntários</li>
+                    <li><b>Mês 4 - Abril:</b> 25 Voluntários</li>
+                    <li><b>Mês 5 - Maio:</b> 30 Voluntários</li>
+                    <li><b>Mês 6 - Junho:</b> 28 Voluntários</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Impacto Social por Região (Adoções)</h3>
+                <canvas id="graficoBarras" width="400" height="200">
+                    Seu navegador não suporta o elemento canvas.
+                </canvas>
+                <ul>
+                    <li><b>Barra 1 - Zona Norte:</b> 30 Adoções</li>
+                    <li><b>Barra 2 - Zona Sul:</b> 45 Adoções</li>
+                    <li><b>Barra 3 - Zona Leste:</b> 22 Adoções</li>
+                    <li><b>Barra 4 - Zona Oeste:</b> 38 Adoções</li>
+                </ul>
+            </article>
+        </section>
+
+    </main>
+
+    <nav>
+        <a href="index.html">Página Principal</a>
+    </nav>
+            <!-- colocando um retorno para a pagina principal -->   
+    <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
+
+    <script>
+        // Gráfico 1: Distribuição de Recursos, usando o exemplo do Círculo
+        function desenharGraficoDistribuicao() {
+            const canvas = document.getElementById('graficoDistribuicao');
+            const ctx = canvas.getContext('2d');
+            const dados = [
+                { valor: 60, cor: '#3498db' }, // Azul
+                { valor: 25, cor: '#2ecc71' }, // Verde
+                { valor: 15, cor: '#e74c3c' }  // Vermelho
+            ];
+            let posicaoX = 80;
+
+            dados.forEach(item => {
+                const raioCirculo = item.valor * 0.7; 
+                ctx.beginPath();
+                ctx.arc(posicaoX, 100, raioCirculo, 0, 2 * Math.PI);
+                ctx.fillStyle = item.cor;
+                ctx.fill();
+                posicaoX += 120;
+            });
+        }
+
+        // Gráfico 2: Evolução de Voluntários, usando o exemplo do Retângulo com Borda
+        function desenharGraficoEvolucao() {
+            const canvas = document.getElementById('graficoEvolucao');
+            const ctx = canvas.getContext('2d');
+            const dados = [10, 12, 18, 25, 30, 28];
+            const larguraRetangulo = 40;
+            const espaco = 20;
+
+            dados.forEach((dado, i) => {
+                const alturaRetangulo = dado * 4;
+                const x = 50 + i * (larguraRetangulo + espaco);
+                const y = 180 - alturaRetangulo;
+                ctx.strokeStyle = '#e74c3c';
+                ctx.lineWidth = 3;
+                ctx.strokeRect(x, y, larguraRetangulo, alturaRetangulo);
+            });
+        }
+        
+        // Gráfico 3: Impacto Social, usando o exemplo do Retângulo Preenchido
+        function desenharGraficoBarras() {
+            const canvas = document.getElementById('graficoBarras');
+            const ctx = canvas.getContext('2d');
+            const dados = [30, 45, 22, 38];
+            const larguraBarra = 50;
+            const espaco = 40;
+
+            dados.forEach((dado, i) => {
+                const alturaBarra = dado * 3;
+                const x = 50 + i * (larguraBarra + espaco);
+                const y = 180 - alturaBarra;
+                ctx.fillStyle = '#3498db';
+                ctx.fillRect(x, y, larguraBarra, alturaBarra);
+            });
+        }
+
+        desenharGraficoDistribuicao();
+        desenharGraficoEvolucao();
+        desenharGraficoBarras();
+    </script>
+
+</body>
+</html>
