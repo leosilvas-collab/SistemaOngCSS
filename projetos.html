@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-        <!-- se trata da página projetos.html -->
-<head>
+        <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nossos Projetos - ONG Gatos Siameses sem Rabinho</title>
     <link rel="icon" href="img/logomini.png" type="image/png">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <nav>
-        <a href="index.html">
-            <img src="img/logolazy.png" alt="Logo da ONG Proteção dos Gatos Siameses sem Rabinho">
+        <a href="index.html" class="logo-nav">
+            <img src="img/logomini.png" alt="Logo Mini da ONG">
         </a>
+        
         <h2>Menu Principal</h2>
+        
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="sobre.html">Sobre a organização</a></li>
@@ -25,38 +27,56 @@
             <li><a href="blog.html">Blog/Notícias</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
+
+        <button class="menu-hamburguer" onclick="toggleMenu()">&#9776;</button>
+
     </nav>
+
+    <ul class="nav-links-mobile" id="nav-links-mobile">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre a organização</a></li>
+        <li><a href="projetos.html">Projetos sociais</a></li>
+        <li><a href="voluntariado.html">Voluntariado</a></li>
+        <li><a href="doacoes.html">Como doar</a></li>
+        <li><a href="transparencia.html">Transparência</a></li>
+        <li><a href="blog.html">Blog/Notícias</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
 
     <main>
         <h1>Nossos Projetos</h1>
 
-        <section>
-            <h2>Iniciativas que Salvam Vidas</h2>
-            <p>Conheça os projetos que mantemos com a ajuda de nossos voluntários e doadores. Cada um deles é um pilar fundamental em nossa missão de proteger e encontrar lares para os gatos siameses sem rabinho.</p>
-            
-            <article class="card">
+        <section class="row">
+
+            <article class="card col-md-6">
                 <h3>Projeto Miau-Adota</h3>
-                <p>Nosso principal foco é encontrar famílias amorosas e responsáveis. Realizamos feiras de adoção mensais e mantemos um perfil online atualizado com todos os gatinhos disponíveis para adoção.</p>
+                <p>O Miau-Adota é nosso principal programa de adoção responsável. Preparamos nossos gatinhos com exames de saúde, vacinação, castração e muito carinho, para que estejam prontos para encontrar um lar definitivo. Realizamos feiras de adoção presenciais e online.</p>
             </article>
-            
-            <article class="card">
+
+            <article class="card col-md-6">
                 <h3>Projeto Castração Solidária</h3>
-                <p>Atuamos em comunidades carentes para controlar a população de animais de rua, oferecendo castração gratuita e conscientizando sobre a posse responsável.</p>
+                <p>Focamos na castração como principal método de controle populacional e prevenção de doenças. Este projeto oferece castração a baixo custo para a comunidade carente, ajudando a controlar a população de gatos de rua.</p>
             </article>
-        </section>
+
+        </section> <hr>
 
         <section>
             <h2>Inscreva-se em um Projeto</h2>
-            <p>Quer participar ativamente de uma de nossas iniciativas? Preencha o formulário abaixo!</p>
-
-            <form>
+            <form action="#" method="post">
                 <fieldset>
-                    <legend>Formulário de Inscrição</legend>
-
-                    <label for="nome">Seu Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" required>
+                    <legend>Seus Dados Pessoais</legend>
+                    <label for="nome_proj">Nome Completo:</label>
+                    <input type="text" id="nome_proj" name="nome_proj" placeholder="Digite seu nome" required>
                     <br><br>
-
+                    <label for="email_proj">E-mail:</label>
+                    <input type="email" id="email_proj" name="email_proj" placeholder="seuemail@dominio.com" required>
+                    <br><br>
+                    <label for="tel_proj">Telefone:</label>
+                    <input type="tel" id="tel_proj" name="tel_proj" placeholder="(11) 99999-8888" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Detalhes da Inscrição</legend>
                     <label for="projeto">Projeto de Interesse:</label>
                     <select id="projeto" name="projeto" required>
                         <option value="" disabled selected>Selecione um projeto</option>
@@ -74,18 +94,26 @@
                     <br>
                 </fieldset>
                 <br>
+                
                 <button type="submit" class="botao">Enviar Inscrição</button>
             </form>
         </section>
 
     </main>
-<p></p>
-<footer>
-    <nav class="nav-footer">
-        <a href="index.html">Página Principal</a>
-    </nav>
-            <!-- colocando um retorno para a pagina principal -->
-            <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
+
+    <footer>
+        <nav class="nav-footer">
+            <a href="index.html">Página Principal</a>
+        </nav>
+        <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var links = document.getElementById("nav-links-mobile");
+            links.classList.toggle("ativo");
+        }
+    </script>
+    
 </body>
 </html>

@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-        <!-- se trata da transparencia.html -->
-<head>
+        <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transparência - ONG Gatos Siameses sem Rabinho</title>
     <link rel="icon" href="img/logomini.png" type="image/png">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <nav>
-        <a href="index.html">
-            <img src="img/logolazy.png" alt="Logo da ONG Proteção dos Gatos Siameses sem Rabinho">
+        <a href="index.html" class="logo-nav">
+            <img src="img/logomini.png" alt="Logo Mini da ONG">
         </a>
+        
         <h2>Menu Principal</h2>
+        
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="sobre.html">Sobre a organização</a></li>
@@ -25,8 +27,21 @@
             <li><a href="blog.html">Blog/Notícias</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
+
+        <button class="menu-hamburguer" onclick="toggleMenu()">&#9776;</button>
+
     </nav>
 
+    <ul class="nav-links-mobile" id="nav-links-mobile">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre a organização</a></li>
+        <li><a href="projetos.html">Projetos sociais</a></li>
+        <li><a href="voluntariado.html">Voluntariado</a></li>
+        <li><a href="doacoes.html">Como doar</a></li>
+        <li><a href="transparencia.html">Transparência</a></li>
+        <li><a href="blog.html">Blog/Notícias</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
     <main>
         <h1>Nossa Transparência</h1>
 
@@ -38,55 +53,64 @@
         <section>
             <h2>Nossos Números</h2>
             
-            <article>
-                <h3>Distribuição de Recursos por Projeto</h3>
-                <canvas id="graficoDistribuicao" width="400" height="200">
-                    Seu navegador não suporta o elemento canvas.
-                </canvas>
-                <ul>
-                    <li><b>Círculo Azul:</b> Resgate e Cuidados (60%)</li>
-                    <li><b>Círculo Verde:</b> Campanhas de Adoção (25%)</li>
-                    <li><b>Círculo Vermelho:</b> Educação Comunitária (15%)</li>
-                </ul>
-            </article>
-            
-            <article>
-                <h3>Evolução de Voluntários ao Longo do Tempo</h3>
-                <canvas id="graficoEvolucao" width="400" height="200">
-                    Seu navegador não suporta o elemento canvas.
-                </canvas>
-                <ul>
-                    <li><b>Mês 1 - Janeiro:</b> 10 Voluntários</li>
-                    <li><b>Mês 2 - Fevereiro:</b> 12 Voluntários</li>
-                    <li><b>Mês 3 - Março:</b> 18 Voluntários</li>
-                    <li><b>Mês 4 - Abril:</b> 25 Voluntários</li>
-                    <li><b>Mês 5 - Maio:</b> 30 Voluntários</li>
-                    <li><b>Mês 6 - Junho:</b> 28 Voluntários</li>
-                </ul>
-            </article>
+            <div class="row">
 
-            <article>
-                <h3>Impacto Social por Região (Adoções)</h3>
-                <canvas id="graficoBarras" width="400" height="200">
-                    Seu navegador não suporta o elemento canvas.
-                </canvas>
-                <ul>
-                    <li><b>Barra 1 - Zona Norte:</b> 30 Adoções</li>
-                    <li><b>Barra 2 - Zona Sul:</b> 45 Adoções</li>
-                    <li><b>Barra 3 - Zona Leste:</b> 22 Adoções</li>
-                    <li><b>Barra 4 - Zona Oeste:</b> 38 Adoções</li>
-                </ul>
-            </article>
-        </section>
+                <article class="card col-lg-4 col-md-6">
+                    <h3>Distribuição de Recursos por Projeto</h3>
+                    <canvas id="graficoDistribuicao" width="400" height="200">
+                        Seu navegador não suporta o elemento canvas.
+                    </canvas>
+                    <ul>
+                        <li><b>Círculo Azul:</b> Resgate e Cuidados (60%)</li>
+                        <li><b>Círculo Verde:</b> Campanhas de Adoção (25%)</li>
+                        <li><b>Círculo Vermelho:</b> Educação Comunitária (15%)</li>
+                    </ul>
+                </article>
+                
+                <article class="card col-lg-4 col-md-6">
+                    <h3>Evolução de Voluntários ao Longo do Tempo</h3>
+                    <canvas id="graficoEvolucao" width="400" height="200">
+                        Seu navegador não suporta o elemento canvas.
+                    </canvas>
+                    <ul>
+                        <li><b>Mês 1 - Janeiro:</b> 10 Voluntários</li>
+                        <li><b>Mês 2 - Fevereiro:</b> 12 Voluntários</li>
+                        <li><b>Mês 3 - Março:</b> 18 Voluntários</li>
+                        <li><b>Mês 4 - Abril:</b> 25 Voluntários</li>
+                        <li><b>Mês 5 - Maio:</b> 30 Voluntários</li>
+                        <li><b>Mês 6 - Junho:</b> 28 Voluntários</li>
+                    </ul>
+                </article>
+
+                <article class="card col-lg-4 col-md-6">
+                    <h3>Impacto Social por Região (Adoções)</h3>
+                    <canvas id="graficoBarras" width="400" height="200">
+                        Seu navegador não suporta o elemento canvas.
+                    </canvas>
+                    <ul>
+                        <li><b>Barra 1 - Zona Norte:</b> 30 Adoções</li>
+                        <li><b>Barra 2 - Zona Sul:</b> 45 Adoções</li>
+                        <li><b>Barra 3 - Zona Leste:</b> 22 Adoções</li>
+                        <li><b>Barra 4 - Zona Oeste:</b> 38 Adoções</li>
+                    </ul>
+                </article>
+            </div> </section>
 
     </main>
+
 <footer>
     <nav class="nav-footer">
         <a href="index.html">Página Principal</a>
     </nav>
-            <!-- colocando um retorno para a pagina principal -->   
-    <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
+            <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
 </footer>
+
+    <script>
+        function toggleMenu() {
+            var links = document.getElementById("nav-links-mobile");
+            links.classList.toggle("ativo");
+        }
+    </script>
     <script>
         // Gráfico 1: Distribuição de Recursos, usando o exemplo do Círculo
         function desenharGraficoDistribuicao() {
