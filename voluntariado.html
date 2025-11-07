@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-        <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seja Voluntário - ONG Gatos Siameses sem Rabinho</title>
     <link rel="icon" href="img/logomini.png" type="image/png">
-
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,9 +13,7 @@
         <a href="index.html" class="logo-nav">
             <img src="img/logomini.png" alt="Logo Mini da ONG">
         </a>
-        
         <h2>Menu Principal</h2>
-        
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="sobre.html">Sobre a organização</a></li>
@@ -27,9 +24,7 @@
             <li><a href="blog.html">Blog/Notícias</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
-
         <button class="menu-hamburguer" onclick="toggleMenu()">&#9776;</button>
-
     </nav>
 
     <ul class="nav-links-mobile" id="nav-links-mobile">
@@ -47,25 +42,37 @@
         <h1>Seja um Voluntário</h1>
         <p>Sua ajuda é fundamental para continuarmos nosso trabalho. Preencha o formulário abaixo para se cadastrar como voluntário em nossa ONG.</p>
 
+        <div class="alert alert-sucesso" id="alert-sucesso-voluntario" style="display: none;">
+            <strong>Cadastro enviado com sucesso!</strong> Entraremos em contato em breve.
+        </div>
+
         <hr>
 
         <section>
             <h2>Formulário de Cadastro de Voluntário</h2>
-            <form action="#" method="post">
+            
+            <form action="#" method="post" id="form-voluntario">
                 
                 <fieldset>
                     <legend>Dados Pessoais</legend>
                     <label for="nome_vol">Nome Completo:</label>
                     <input type="text" id="nome_vol" name="nome_vol" placeholder="Digite seu nome" required>
+                    <div class="error-message" id="error-nome-vol"></div>
                     <br><br>
+                    
                     <label for="email_vol">E-mail:</label>
                     <input type="email" id="email_vol" name="email_vol" placeholder="seuemail@dominio.com" required>
+                    <div class="error-message" id="error-email-vol"></div>
                     <br><br>
+                    
                     <label for="tel_vol">Telefone:</label>
                     <input type="tel" id="tel_vol" name="tel_vol" placeholder="(11) 99999-8888" required>
+                    <div class="error-message" id="error-tel-vol"></div>
                     <br><br>
+                    
                     <label for="nascimento">Data de Nascimento:</label>
                     <input type="date" id="nascimento" name="nascimento" required>
+                    <div class="error-message" id="error-nascimento-vol"></div>
                 </fieldset>
 
                 <fieldset>
@@ -79,7 +86,9 @@
                         <option value="admin">Administrativo (redes sociais, financeiro)</option>
                         <option value="outra">Outra</option>
                     </select>
+                    <div class="error-message" id="error-area-vol"></div>
                     <br><br>
+                    
                     <label for="habilidades">Descreva brevemente suas habilidades:</label><br>
                     <textarea id="habilidades" name="habilidades" rows="5" cols="50" placeholder="Ex: Sou bom com planilhas, tenho experiência com gatos ariscos, sou fotógrafo..."></textarea>
                 </fieldset>
@@ -87,6 +96,7 @@
                 <fieldset>
                     <legend>Disponibilidade</legend>
                     <p>Quais dias da semana você pode ajudar?</p>
+                    
                     <input type="checkbox" id="dia_seg" name="dias" value="segunda">
                     <label for="dia_seg">Segunda-feira</label><br>
                     <input type="checkbox" id="dia_ter" name="dias" value="terca">
@@ -101,6 +111,7 @@
                     <label for="dia_sab">Sábado</label><br>
                     <input type="checkbox" id="dia_dom" name="dias" value="domingo">
                     <label for="dia_dom">Domingo</label><br>
+                    <div class="error-message" id="error-dias-vol"></div>
                     <br>
 
                     <p>Qual período é melhor para você?</p>
@@ -110,6 +121,7 @@
                     <label for="periodo_tarde">Tarde</label><br>
                     <input type="radio" id="periodo_noite" name="periodo" value="noite">
                     <label for="periodo_noite">Noite</label><br>
+                    <div class="error-message" id="error-periodo-vol"></div>
                 </fieldset>
 
                 <br>
@@ -125,7 +137,7 @@
         <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
     </footer>
 
-<script src="js/script.js" defer></script>
-    
-</body>
+    <script src="js/script.js" defer></script>
+    <script src="js/validation.js" defer></script> 
+    </body>
 </html>
