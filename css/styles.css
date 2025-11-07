@@ -238,10 +238,11 @@ textarea {
     transition: all 0.3s ease;
 }
 
+/* ERRO 1 CORRIGIDO (type-> para type=) */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
-input[type-> "date"]:focus,
+input[type="date"]:focus,
 input[type="file"]:focus,
 select:focus,
 textarea:focus {
@@ -514,7 +515,7 @@ footer p {
     overflow: hidden;
     box-shadow: var(--sombra-suave);
     transition: all 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+    /* overflow: hidden; */ /* (Redundante, já declarado acima) */
     height: 100%;
 }
 
@@ -536,6 +537,8 @@ footer p {
     font-size: var(--fs-small);
     color: var(--cor-texto-secundario);
 }
+
+/* ERRO 2 CORRIGIDO (ponto e vírgula adicionado) */
 .badge {
     display: inline-block;
     padding: var(--esp-1) var(--esp-2);
@@ -546,7 +549,7 @@ footer p {
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: var(--border-radius);
-    color: var(--cor-branca)
+    color: var(--cor-branca);
     background-color: var(--cor-primaria);
 }
 
@@ -573,7 +576,8 @@ footer p {
 }
 
 .error-message {
-  color: var(--cor-erro);
-  font-size: var(--fs-small);
-  margin-top: calc(var(--esp-1) / 2);
+    color: var(--cor-erro);
+    font-size: var(--fs-small);
+    margin-top: calc(var(--esp-1) / 2);
 }
+
