@@ -59,22 +59,26 @@
 
         <section>
 
-            <div class="alert alert-sucesso">
-                <strong>Exemplo de Alerta:</strong> Sua mensagem foi enviada com sucesso!
+            <div class="alert alert-sucesso" id="alert-sucesso" style="display: none;">
+                <strong>Sucesso!</strong> Sua mensagem foi enviada.
             </div>
 
             <h2>Envie uma Mensagem</h2>
             <p>Tem dúvidas, sugestões ou quer propor uma parceria? Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
             
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="#" method="post" enctype="multipart/form-data" id="form-contato">
                 <fieldset>
                     <legend>Sua Mensagem</legend>
+                    
                     <label for="nome_cont">Nome Completo:</label>
                     <input type="text" id="nome_cont" name="nome_cont" placeholder="Digite seu nome" required>
+                    <div class="error-message" id="error-nome"></div>
                     <br><br>
+                    
                     <label for="email_cont">E-mail:</label>
                     <input type="email" id="email_cont" name="email_cont" placeholder="seuemail@dominio.com" required>
                     <br><br>
+                    
                     <label for="tel_cont">Telefone:</label>
                     <input type="tel" id="tel_cont" name="tel_cont" placeholder="(11) 99999-8888">
                     
@@ -92,6 +96,7 @@
 
                     <label for="mensagem">Sua Mensagem:</label><br>
                     <textarea id="mensagem" name="mensagem" rows="8" cols="50" required></textarea>
+                    <div class="error-message" id="error-mensagem"></div>
                     <br><br>
 
                     <label for="anexo">Anexar Arquivo:</label>
@@ -113,7 +118,8 @@
         <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
     </footer>
 
-<script src="js/script.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/validation.js" defer></script>
     
 </body>
 </html>

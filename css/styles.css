@@ -571,3 +571,9 @@ footer p {
 .alert-sucesso strong {
     color: #155724;
 }
+
+.error-message {
+  color: var(--cor-erro);
+  font-size: var(--fs-small);
+  margin-top: calc(var(--esp-1) / 2);
+}
