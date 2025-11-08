@@ -51,7 +51,7 @@ Você pode acessar o site completo e funcional através do link do GitHub Pages:
 
 **[https://leosilvas-collab.github.io/SistemaOngCSS/](https://leosilvas-collab.github.io/SistemaOngCSS/)**
 
-*(A branch publicada no GitHub Pages será atualizada conforme as atividades avançam.)*
+*(A branch publicada no GitHub Pages será atualizada conforme as atividades avancem.)*
 
 ---
 
