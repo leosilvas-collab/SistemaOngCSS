@@ -39,6 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
             // Bônus: Mudar o título da aba (copia o título da página nova)
             document.title = doc.title;
 
+            // --- INÍCIO DA ATUALIZAÇÃO (ATIVIDADE 4: ACESSIBILIDADE) ---
+            
+            // 6. Gerenciamento de Foco para Acessibilidade
+            // Move o foco do usuário para o novo <h1> da página carregada.
+            // Isso anuncia ao leitor de tela que a página mudou.
+            const newHeading = mainContent.querySelector('h1');
+            if (newHeading) {
+                // Adicionamos tabindex="-1" para permitir que 
+                // elementos (como <h1>) que normalmente não são 
+                // focáveis possam receber foco via JavaScript.
+                newHeading.setAttribute('tabindex', '-1');
+                newHeading.focus();
+            }
+            // --- FIM DA ATUALIZAÇÃO ---
+
         } catch (error) {
             console.error('Deu ruim no SPA:', error);
             // Se o 'fetch' falhar, só navega do jeito normal (dando refresh)

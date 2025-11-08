@@ -24,10 +24,11 @@
             <li><a href="blog.html">Blog/Notícias</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
+        
         <button class="menu-hamburguer" onclick="toggleMenu()" 
-            aria-label="Abrir ou fechar menu de navegação"
-            aria-controls="nav-links-mobile" 
-            aria-expanded="false">
+                aria-label="Abrir ou fechar menu de navegação"
+                aria-controls="nav-links-mobile" 
+                aria-expanded="false">
             &#9776;
         </button>
     </nav>
@@ -60,30 +61,31 @@
                 
                 <fieldset>
                     <legend>Dados Pessoais</legend>
+                    
                     <label for="nome_vol">Nome Completo:</label>
-                    <input type="text" id="nome_vol" name="nome_vol" placeholder="Digite seu nome" required>
-                    <div class="error-message" id="error-nome-vol"></div>
+                    <input type="text" id="nome_vol" name="nome_vol" placeholder="Digite seu nome" required aria-describedby="error-nome-vol">
+                    <div class="error-message" id="error-nome-vol" role="alert"></div>
                     <br><br>
                     
                     <label for="email_vol">E-mail:</label>
-                    <input type="email" id="email_vol" name="email_vol" placeholder="seuemail@dominio.com" required>
-                    <div class="error-message" id="error-email-vol"></div>
+                    <input type="email" id="email_vol" name="email_vol" placeholder="seuemail@dominio.com" required aria-describedby="error-email-vol">
+                    <div class="error-message" id="error-email-vol" role="alert"></div>
                     <br><br>
                     
                     <label for="tel_vol">Telefone:</label>
-                    <input type="tel" id="tel_vol" name="tel_vol" placeholder="(11) 99999-8888" required>
-                    <div class="error-message" id="error-tel-vol"></div>
+                    <input type="tel" id="tel_vol" name="tel_vol" placeholder="(11) 99999-8888" required aria-describedby="error-tel-vol">
+                    <div class="error-message" id="error-tel-vol" role="alert"></div>
                     <br><br>
                     
                     <label for="nascimento">Data de Nascimento:</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
-                    <div class="error-message" id="error-nascimento-vol"></div>
+                    <input type="date" id="nascimento" name="nascimento" required aria-describedby="error-nascimento-vol">
+                    <div class="error-message" id="error-nascimento-vol" role="alert"></div>
                 </fieldset>
 
                 <fieldset>
                     <legend>Suas Habilidades</legend>
                     <label for="area_interesse">Principal área de interesse:</label>
-                    <select id="area_interesse" name="area_interesse" required>
+                    <select id="area_interesse" name="area_interesse" required aria-describedby="error-area-vol">
                         <option value="" disabled selected>Selecione uma área</option>
                         <option value="cuidados">Cuidados com Animais (limpeza, alimentação)</option>
                         <option value="feira">Feiras de Adoção (logística, entrevista)</option>
@@ -91,7 +93,7 @@
                         <option value="admin">Administrativo (redes sociais, financeiro)</option>
                         <option value="outra">Outra</option>
                     </select>
-                    <div class="error-message" id="error-area-vol"></div>
+                    <div class="error-message" id="error-area-vol" role="alert"></div>
                     <br><br>
                     
                     <label for="habilidades">Descreva brevemente suas habilidades:</label><br>
@@ -116,7 +118,8 @@
                     <label for="dia_sab">Sábado</label><br>
                     <input type="checkbox" id="dia_dom" name="dias" value="domingo">
                     <label for="dia_dom">Domingo</label><br>
-                    <div class="error-message" id="error-dias-vol"></div>
+                    
+                    <div class="error-message" id="error-dias-vol" role="alert"></div>
                     <br>
 
                     <p>Qual período é melhor para você?</p>
@@ -126,7 +129,7 @@
                     <label for="periodo_tarde">Tarde</label><br>
                     <input type="radio" id="periodo_noite" name="periodo" value="noite">
                     <label for="periodo_noite">Noite</label><br>
-                    <div class="error-message" id="error-periodo-vol"></div>
+                    <div class="error-message" id="error-periodo-vol" role="alert"></div>
                 </fieldset>
 
                 <br>
@@ -144,5 +147,7 @@
 
     <script src="js/script.js" defer></script>
     <script src="js/validation.js" defer></script> 
-    </body>
+    <script src="js/spa.js" defer></script>
+    
+</body>
 </html>

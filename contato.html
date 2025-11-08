@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-        <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - ONG Gatos Siameses sem Rabinho</title>
@@ -29,9 +29,9 @@
         </ul>
 
         <button class="menu-hamburguer" onclick="toggleMenu()" 
-            aria-label="Abrir ou fechar menu de navegação"
-            aria-controls="nav-links-mobile" 
-            aria-expanded="false">
+                aria-label="Abrir ou fechar menu de navegação"
+                aria-controls="nav-links-mobile" 
+                aria-expanded="false">
             &#9776;
         </button>
 
@@ -76,8 +76,9 @@
                     <legend>Sua Mensagem</legend>
                     
                     <label for="nome_cont">Nome Completo:</label>
-                    <input type="text" id="nome_cont" name="nome_cont" placeholder="Digite seu nome" required>
-                    <div class="error-message" id="error-nome"></div>
+                    <input type="text" id="nome_cont" name="nome_cont" placeholder="Digite seu nome" required 
+                           aria-describedby="error-nome"> 
+                    <div class="error-message" id="error-nome" role="alert"></div>
                     <br><br>
                     
                     <label for="email_cont">E-mail:</label>
@@ -100,8 +101,9 @@
                     <br><br>
 
                     <label for="mensagem">Sua Mensagem:</label><br>
-                    <textarea id="mensagem" name="mensagem" rows="8" cols="50" required></textarea>
-                    <div class="error-message" id="error-mensagem"></div>
+                    <textarea id="mensagem" name="mensagem" rows="8" cols="50" required 
+                              aria-describedby="error-mensagem"></textarea>
+                    <div class="error-message" id="error-mensagem" role="alert"></div>
                     <br><br>
 
                     <label for="anexo">Anexar Arquivo:</label>
@@ -123,9 +125,9 @@
         <p>Este site é um projeto acadêmico. A ONG 'Proteção dos Gatos Siameses sem Rabinho', assim como todos os dados e estatísticas apresentados, são fictícios e foram criados exclusivamente para fins educacionais.</p>
     </footer>
 
-<script src="js/script.js" defer></script>
-<script src="js/validation.js" defer></script> 
-<script src="js/spa.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/spa.js" defer></script>
     
 </body>
 </html>
