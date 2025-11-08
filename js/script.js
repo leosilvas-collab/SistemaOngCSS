@@ -1,17 +1,3 @@
-// Adiciona um elemento de menu móvel ao clicar no ícone
-// No seu arquivo /js/script.js
-
-function toggleMenu() {
-    const mobileMenu = document.getElementById("nav-links-mobile");
-    const menuButton = document.querySelector(".menu-hamburguer");
-
-    // 1. Alterna a classe .ativo (como antes)
-    mobileMenu.classList.toggle("ativo");
-
-    // 2. Verifica se o menu AGORA está ativo
-    const estaAtivo = mobileMenu.classList.contains("ativo");
-
-    // 3. Atualiza os atributos ARIA (Requisito da Atividade 4)
-    // Isso avisa aos leitores de tela se o menu está expandido ou não.
-    menuButton.setAttribute("aria-expanded", estaAtivo);
-}
+function toggleMenu(){const mobileMenu=document.getElementById("nav-links-mobile");const menuButton=document.querySelector(".menu-hamburguer");mobileMenu.classList.toggle("ativo");const estaAtivo=mobileMenu.classList.contains("ativo");menuButton.setAttribute("aria-expanded",estaAtivo)}
+document.addEventListener('DOMContentLoaded',()=>{const themeToggle=document.getElementById('theme-toggle');const body=document.body;const toggleDarkMode=(activate)=>{if(activate){body.classList.add('dark-mode');themeToggle.textContent='☀️';themeToggle.setAttribute('aria-label','Ativar modo claro');localStorage.setItem('theme','dark')}else{body.classList.remove('dark-mode');themeToggle.textContent='🌙';themeToggle.setAttribute('aria-label','Ativar modo escuro');localStorage.setItem('theme','light')}};const savedTheme=localStorage.getItem('theme');if(savedTheme==='dark'){toggleDarkMode(!0)}
+themeToggle.addEventListener('click',()=>{const isDarkMode=body.classList.contains('dark-mode');toggleDarkMode(!isDarkMode)})})
